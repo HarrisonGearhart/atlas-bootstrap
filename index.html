@@ -1,51 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Golfing with Harrison</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="styles.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golfing with Harrison</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<!--Header Hambgurger-Menu Navbar-->
+<!-- Header Hamburger-Menu Navbar -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container-fluid"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Brand Section -->
             <a class="navbar-brand d-flex align-items-center" href="#">
-			    <img src="images/Golf-Pose-Brand.jpg" width="45">
-			    <h1 class="fs-8 mx-3 text-light">Golfing with Harrison</h1>
-		    </a>
-            <button class="navbar-toggler" type="button" data-bs-togge="collapse" data-bs-target="#Nav" aria-controls="Nav" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="img-fluid" src="images/Golf-Pose-Brand.jpg" style="max-height: 50px;">
+                <h1 class="fs-8 mx-3 text-light">Golfing with Harrison</h1>
+            </a>
+            <!-- Hamburger Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavBar" aria-controls="NavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="NavBar">
-                <ul class="navbar-nav justify-content-end">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link fs-8 mx-3" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav link fs-8 mx-3" href="#">About Me</a>
+                        <a class="nav-link fs-8 mx-3" href="#about-me">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav link fs-8 mx-3" href="#">Favorite Courses</a>
+                        <a class="nav-link fs-8 mx-3" href="#favorite-courses">Favorite Courses</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<!--Banner Free Section-->
-<main class="bg-black">
-    <section>
-        <div class="banner container-fluid position-relative d-flex justify-content-center text-center align-items-center" style="background-image: url(images/Hole-in-One.JPG); background-size: cover; background-position: center; height: 500px;">
-            <div class="position-absolute text-white">
+<!-- Main Banner Section -->
+<main>
+    <section class="container-fluid p-0" style="background-image: url(images/Hole-in-One.jpg); background-size: cover; background-position: center; height: 100vh;">
+        <div class="banner position-relative d-flex justify-content-center align-items-center w-100 h-100">
+            <div class="position-absolute text-white text-center">
                 <h1>Welcome to Golfing with Harrison!</h1>
+                <h2>Check out my golf bio, favorite courses, and favorite golfers below!</h2>
             </div>
         </div>
     </section>
+    <!-- Single Carousel Section -->
+    <section id="about-me" class="container-fluid p-0 bg-success py-5">
+        <h2 class="text-center mb-4 text-white">About Me</h2>
+        <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Card -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center">
+                        <!-- Circular Image -->
+                        <img src="images/Golf-Pose-Brand.jpg" alt="Image" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
+                        <!-- Quote Text -->
+                        <div class="text-center">
+                            <p class="fs-5 text-white">I've played golf for over 20 years, and I'm currently a scratch golfer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Card -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center">
+                        <!-- Rectangle Image -->
+                        <img src="images/Conference.JPG" alt="Image" class="img-fluid mb-3" style="width: 300px; height: 200px; object-fit: cover;">
+                        <!-- Quote Text -->
+                        <div class="text-center">
+                            <p class="fs-5 text-white">I coached for my former High School, and we won the conference championship!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Favorite Courses I Have Played Section -->
+    <section id="favorite-courses" class="container-fluid bg-success py-5">
+        <h2 class="text-center mb-4 text-white">Favorite Courses I Have Played</h2>
+        <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img src="images/Southern.jpg" class="card-img-top" alt="Southern Hills" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Southern Hills</h5>
+                                    <p class="card-text">Tulsa, OK</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img src="images/Karsten.jpg" class="card-img-top" alt="Karsten Creek" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Karsten Creek</h5>
+                                    <p class="card-text">Stillwater, OK</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img src="images/Med.jpg" class="card-img-top" alt="Medinah" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Medinah</h5>
+                                    <p class="card-text">Chicago, IL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="card">
+                                <img src="images/Shadow.jpg" class="card-img-top" alt="Shadow Creek" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Shadow Creek</h5>
+                                    <p class="card-text">Las Vegas, NV</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Favorite Golfers Section -->
+    <section class="container-fluid bg-success my-0 py-5">
+        <h2 class="text-center mb-4 text-white">Favorite Golfers</h2>
+        <div class="row">
+            <!-- Dropdown and Content -->
+            <div class="col-lg-8">
+                <form>
+                    <label for="golferDropdown" class="form-label text-white">Select a Golfer:</label>
+                    <!-- Dropdown Menu -->
+                    <select id="golferDropdown" class="form-select mb-4" onchange="
+                        document.getElementById('golferTiger').classList.add('d-none');
+                        document.getElementById('golferJordan').classList.add('d-none');
+                        document.getElementById('golferXander').classList.add('d-none');
+                        document.getElementById(this.value).classList.remove('d-none');
+                    ">
+                        <option value="golferTiger" selected>Tiger Woods</option>
+                        <option value="golferJordan">Jordan Spieth</option>
+                        <option value="golferXander">Xander Schauffele</option>
+                    </select>
+                </form>
+                <!-- Golfer Profiles -->
+                <div id="golferProfiles">
+                    <!-- Tiger Woods -->
+                    <div id="golferTiger" class="text-center">
+                        <img src="images/T.jpg" alt="Tiger Woods" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h3 class="text-white">Tiger Woods</h3>
+                    </div>
+                    <!-- Jordan Spieth -->
+                    <div id="golferJordan" class="text-center d-none">
+                        <img src="images/J.jpg" alt="Jordan Spieth" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h3 class="text-white">Jordan Spieth</h3>
+                    </div>
+                    <!-- Xander Schauffele -->
+                    <div id="golferXander" class="text-center d-none">
+                        <img src="images/X.jpg" alt="Xander Schauffele" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h3 class="text-white">Xander Schauffele</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Aside Section -->
+            <aside class="col-lg-4 bg-success text-white p-3">
+                <h5 class="text-center">Fun Facts About My Favorite Golfers</h5>
+                <ul>
+                    <li>Tiger Woods has won 15 major championships.</li>
+                    <li>Jordan Spieth won the Masters and US Open back-to-back in 2015.</li>
+                    <li>Xander Schauffele won Olympic gold in 2020 and two majors in 2024.</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer class="bg-success text-white py-3">
+        <div class="container text-center">
+            <p>Developed by Harrison Gearhart</p>
+            <a href="https://github.com/HarrisonGearhart" target="_blank">
+                <img src="images/github.jpg" alt="GitHub Link" class="img-fluid" style="width: 50px; height: auto;">
+            </a>
+            <p class="mt-2">© 2025 Golfing with Harrison. All Rights Reserved.</p>
+        </div>
+    </footer>
 </main>
 </body>
+</html>
